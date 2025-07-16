@@ -13,23 +13,23 @@
         hml: home_row_mod_left {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "hold-preferred";
+            flavor = "balanced";
             require-prior-idle-ms = <200>;
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = < 23 24 25 26 27 29 30 31 32 33 35 36 37 38 39 40 41 42 >; // List of keys on the right side of the keyboard
+            hold-trigger-key-positions = < 23 24 25 26 27 29 30 31 32 33 35 36 37 38 39 40 41 42 19 20 21>; // List of keys on the right side of the keyboard
             hold-trigger-on-release;
         };
         hmr: home_row_mod_right {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "hold-preferred";
+            flavor = "balanced";
             require-prior-idle-ms = <200>;
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = < 2 3 4 5 6 8 9 10 11 12 14 15 16 17 18 19 20 21 >; // List of keys on the left side of the keyboard
+            hold-trigger-key-positions = < 2 3 4 5 6 8 9 10 11 12 14 15 16 17 18 19 20 21 40 41 42>; // List of keys on the left side of the keyboard
             hold-trigger-on-release;
         };
     };
