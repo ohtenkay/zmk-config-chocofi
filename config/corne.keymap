@@ -78,10 +78,10 @@
 
         raise_layer {
             bindings = <
-   &trans       &cs_ur       &cs_ec       &cs_sc       &cs_cc       &cs_rc         &cs_zc       &cs_ya       &cs_aa       &cs_ia       &cs_ea       &trans
-   &trans       &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &kp CAPS     &trans
-   &trans       &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR     &kp HOME     &kp HOME     &kp END      &trans       &kp HOME     &trans
-                                          &kp ESC      &trans       &kp SPACE      &trans       &trans       &trans
+   &trans       &cs_ur           &cs_ec           &cs_sc           &cs_cc           &cs_rc         &cs_zc       &cs_ya       &cs_aa       &cs_ia       &cs_ea       &trans
+   &trans       &hml LALT HOME   &hml LGUI HOME   &hml LCTRL HOME  &hml LSHFT HOME  &kp CAPS       &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &kp END      &trans
+   &trans       &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_CLR     &cs_tc       &cs_oa       &cs_ua       &cs_dc       &cs_nc       &trans
+                                                  &kp ESC          &trans           &kp SPACE      &trans       &trans       &trans
             >;
         };
     };
