@@ -80,7 +80,7 @@
         raise_layer {
             bindings = <
    &trans       &uc UC_CS_UR     &uc UC_CS_EC     &uc UC_CS_SC     &uc UC_CS_CC     &uc UC_CS_RC   &uc UC_CS_ZC &uc UC_CS_YA &uc UC_CS_AA &uc UC_CS_IA &uc UC_CS_EA &trans
-   &trans       &hml LALT HOME   &hml LGUI HOME   &hml LCTRL HOME  &hml LSHFT HOME  &kp CAPS       &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &kp END      &trans
+   &trans       &hml LALT HOME   &hml LGUI HOME   &hml LCTRL PG_UP &hml LSHFT PG_DN &kp CAPS       &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &kp END      &trans
    &trans       &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_CLR     &uc UC_CS_TC &uc UC_CS_OA &uc UC_CS_UA &uc UC_CS_DC &uc UC_CS_NC &trans
                                                   &kp ESC          &trans           &kp SPACE      &trans       &trans       &trans
             >;
