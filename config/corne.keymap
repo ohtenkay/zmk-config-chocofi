@@ -14,6 +14,10 @@
     quick-release;
 };
 
+&uc {
+  default-mode = <UC_MODE_LINUX_ALT>;
+};
+
 / {
     behaviors {
         hml: home_row_mod_left {
