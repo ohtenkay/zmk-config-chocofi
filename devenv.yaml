@@ -1,0 +1,6 @@
+inputs:
+  nixpkgs:
+    url: github:cachix/devenv-nixpkgs/rolling
+  zmk-toolchain:
+    url: github:NixOS/nixpkgs/nixos-24.11
+    flake: false
