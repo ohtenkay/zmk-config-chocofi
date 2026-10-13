@@ -10,6 +10,9 @@
 #define KEYS_R RT0 RT1 RT2 RT3 RT4 RT5 RM0 RM1 RM2 RM3 RM4 RM5 RB0 RB1 RB2 RB3 RB4 RB5  // Right-hand keys.
 #define THUMBS LH2 LH1 LH0 RH0 RH1 RH2                                                  // Thumb keys.
 
+#define GAME 3
+#define GAME_NUM 4
+
 &sk {
     quick-release;
 };
@@ -54,6 +57,16 @@
 };
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        gaming_toggle {
+            timeout-ms = <50>;
+            key-positions = <LH1 RH1>;
+            bindings = <&tog GAME>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -81,6 +94,24 @@
    &trans       &hml LALT HOME   &hml LGUI HOME   &hml LCTRL PG_UP &hml LSHFT PG_DN &kp CAPS       &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &kp END      &trans
    &trans       &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_CLR     &uc UC_CS_TC &uc UC_CS_OA &uc UC_CS_UA &uc UC_CS_DC &uc UC_CS_NC &trans
                                                   &kp ESC          &trans           &kp SPACE      &trans       &trans       &trans
+            >;
+        };
+
+        gaming_layer {
+            bindings = <
+   &trans       &kp TAB      &kp Q        &kp W        &kp E        &kp R          &kp T        &kp Y        &kp U        &kp I        &kp O        &trans
+   &trans       &kp LSHFT    &kp A        &kp S        &kp D        &kp F          &kp G        &kp H        &kp J        &kp K        &kp L        &trans
+   &trans       &kp LCTRL    &kp Z        &kp X        &kp C        &kp V          &kp B        &kp N        &kp M        &kp COMMA    &kp P        &trans
+                                          &mt LALT ESC &mo GAME_NUM &kp SPACE      &kp BSPC     &kp DEL      &kp RET
+            >;
+        };
+
+        gaming_numbers_layer {
+            bindings = <
+   &trans       &kp N0       &kp N1       &trans       &kp N2       &kp N3         &trans       &trans       &trans       &trans       &trans       &trans
+   &trans       &trans       &trans       &trans       &trans       &kp N4         &trans       &trans       &trans       &trans       &trans       &trans
+   &trans       &trans       &kp N5       &kp N6       &kp N7       &kp N8         &trans       &trans       &trans       &trans       &kp N9       &trans
+                                          &trans       &trans       &trans         &trans       &trans       &trans
             >;
         };
     };
